@@ -2,7 +2,7 @@ import { connect } from "mongoose";
 
 const connectToMongo = async () => {
     try {
-        await connect("mongodb+srv://manojkumar:manoj@enotebookdatabase.0tjxmqy.mongodb.net/eNotebook")
+        await connect(process.env.MONGO_URI)
         console.log("<---Connected Successfully--->")
     } catch (error) {
         console.log(error)
